@@ -1,0 +1,44 @@
+<h1><%= @cannabi.strain %></h1>
+
+<div id='map'></div>
+
+<h2> Description:</h2> <%= @cannabi.data %> 
+
+<br>
+
+<h4> Strain </h4>
+<div class="img">
+    <%= image_tag (@cannabi.img_url) %>
+
+<br>
+
+<h3> Origin: </h3> <%= @cannabi.origin %>
+
+<br>
+
+<%= image_tag (@cannabi.flag_url) %>
+
+<br><br>
+
+<%= link_to "All Cannabis", cannabis_path %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset=utf-8 />
+    <title>CannabisApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  
+</html>
