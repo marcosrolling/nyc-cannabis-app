@@ -1,0 +1,10 @@
+<%= form_for @cannabi do |f| %>
+    <%= f.text_field :strain, placeholder: "strain" %>
+    <br>
+    <%= f.text_field :data, placeholder: "description" %>
+    <br>
+    <%= f.submit "Save changes" %>
+    <br>
+    <%= button_to "Delete #{@cannabi.strain}", cannabi_path(@cannabi), method: :delete %>
+
+<% end %>
