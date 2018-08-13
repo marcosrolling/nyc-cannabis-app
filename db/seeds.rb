@@ -47,8 +47,8 @@ Cannabis.create({
         origin: 'United States', 
         flag_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/300px-Flag_of_the_United_States.svg.png', 
         data: 'Blue Goo is a sativa-dominant hybrid that is a cross between the famous hybrid Blue Dream and indica Afgoo. A moderate to high potency yields uplifting effects that are standard for sativas, but not excessively energetic thanks to Afgoo’s contribution as well as the mellow nature of Blue Dream. This strain is appropriate for day or nighttime consumption and is good for treating depression and nausea. Smooth smoke and berry taste.',
-        lat: 33.9391,
-        lon: 67.7100
+        lat: 39.742043, 
+        lon: -104.991531
     })
 Cannabis.create({
         strain: 'Sour Diesel' , 
