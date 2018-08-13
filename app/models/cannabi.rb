@@ -1,2 +1,0 @@
-class Cannabi < ApplicationRecord
-end
