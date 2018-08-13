@@ -1,8 +1,12 @@
 <h1> Cannabis Strains </h1>
 
-<ul>
-<% @cannabi.each do |cannabi| %>
-    <ul><%= link_to cannabi.strain, cannabi_path(cannabi)%></ul>
-    <% end %>
-</ul>
+<div class='list'>
+    <ol>
+        <% @cannabi.each do |cannabi| %>
+            <ul><%= link_to cannabi.strain, cannabi_path(cannabi)%></ul>
+    </ol>
+</div>
+    <button><%= link_to "Edit", edit_cannabi_path(cannabi.id) %></button>
+    <button><%= link_to "Delete", cannabi_path(cannabi.id), method: :delete %></button>
+<% end %>
 
