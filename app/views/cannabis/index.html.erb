@@ -1,8 +1,8 @@
 <h1> Cannabis Strains </h1>
 
 <ul>
-<% @cannabis.each do |cannabi| %>
-    <li><%= link_to cannabi.strain, cannabi_path(cannabi)%></li>
+<% @cannabi.each do |cannabi| %>
+    <ul><%= link_to cannabi.strain, cannabi_path(cannabi)%></ul>
     <% end %>
 </ul>
 
