@@ -1,12 +1,28 @@
 <h1> Cannabis Strains </h1>
-
-<div class='list'>
-    <ol>
-        <% @cannabi.each do |cannabi| %>
-            <ul><%= link_to cannabi.strain, cannabi_path(cannabi)%></ul>
-    </ol>
+<div class='homer'>
+    <img src="https://media.giphy.com/media/Jnx5ztK49mHJe/giphy.gif" alt="homer" />
 </div>
-    <button><%= link_to "Edit", edit_cannabi_path(cannabi.id) %></button>
-    <button><%= link_to "Delete", cannabi_path(cannabi.id), method: :delete %></button>
+
+
+
+<div class="effect1">
+    <h2> Select a Strain </h2>    
+    <h3><% @cannabi.each do |cannabi| %></h3>
+    <ul><%= link_to cannabi.strain, cannabi_path(cannabi)%></ul>
+        <button><%= link_to "Create", edit_cannabi_path(cannabi.id) %></button>
+        <button><%= link_to "Delete", cannabi_path(cannabi.id), method: :delete %></button>
+</div>
 <% end %>
+<div class="effect2">
+    <p>Marijuana strains stem (no pun intended) from all over the world</p>
+</div>
+<div class="effect3">
+    <p>Despensaries are the safest way to obtain medical marijuana</p>
+</div>
+
+
+
+
+
+
 
