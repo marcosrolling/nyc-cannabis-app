@@ -1,5 +1,12 @@
-<h1> Edit Cannabis </h1>
+<h1> Create a Strain </h1>
 
-<%= render partial: 'form' %>
+
+<%= form_for :strain do |f| %>
+    <h2>Strain:</h2><%= f.text_field :strain %><br />
+    <h2>Origin:</h2><%= f.text_field :origin %><br />
+    <h2>Description:</h2><%= f.text_field :data %><br />
+    <h2>Image:</h2><%= f.text_field :img_url %><br /><br />
+    <%= f.submit %>  
+<% end %>
 
 <h4><%= link_to 'List of Cannabis', cannabis_path  %></h4>
