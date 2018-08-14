@@ -11,18 +11,17 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
+//= require mapbox.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require mapbox.js
 //= require_tree .
 
 
+// $( document ).ready(function() {
+//     console.log( "ready!" );
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-
-    L.mapbox.accessToken = 'pk.eyJ1IjoidG9kZG04NyIsImEiOiJjamtteW5hODYwZ2VyM3FxcjhxdHY1M3NoIn0.txU0n14hIpXGRxUPC56jng';
-    const map = L.mapbox.map('map', 'mapbox.streets')
-                        .setView([37.9, -77], 5);
-})
+//     L.mapbox.accessToken = 'pk.eyJ1IjoidG9kZG04NyIsImEiOiJjamtteW5hODYwZ2VyM3FxcjhxdHY1M3NoIn0.txU0n14hIpXGRxUPC56jng';
+//     const map = L.mapbox.map('map', 'mapbox.streets')
+//                         .setView([37.9, -77], 5);
+// })
