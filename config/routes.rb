@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  
 resources :cannabis
+resources :cannabi
+
 root to: 'cannabis#index'
 root to: 'cannabis#new'
 root to: 'cannabis#edit'
