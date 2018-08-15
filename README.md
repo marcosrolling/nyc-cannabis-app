@@ -28,3 +28,7 @@
 ##Future Plans
 
 <p>I would like to continue to work on this project. Get my routes down. Make it mobile and easier to use.</p>
+
+##Link to my repo
+
+https://github.com/toddm87/nyc-cannabis-app
