@@ -18,3 +18,8 @@ The app gives users a brief history of where they're favorite strain might come 
 
 All the dependencies came standard with the normal installation of RoR
 -Added a gemfile for the maps
+
+##Challenges
+
+Where do I begin!! I found it difficult to make my routes workout the way I wanted to. 
+Overall I enjoyed making this app because it challenged me immensely.
