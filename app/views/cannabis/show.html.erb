@@ -1,45 +1,48 @@
-<%= link_to "List of Cannabis", cannabis_path %>
+<div class="topnav">
+  <%= link_to "Home Page", cannabis_path %>
+  <%= link_to "Create Page", edit_cannabi_path %>
+</div>
 
 <h1><%= @cannabi.strain %></h1>
 
 <h2> Strain </h2>
-  <%= image_tag (@cannabi.img_url) %>
-<br>
+<div id="strain">
+<%= image_tag (@cannabi.img_url) %>
+</div>
 
-<h2> Description:</h2> <%= @cannabi.data %> 
-<br>
+<div class='dna'></div>
 
-<h2> Origin: </h2> <%= @cannabi.origin %>
-<br>
+<h2> Description </h2> 
+<div id="data">
+<%= @cannabi.data %>
+</div> 
 
+<div class='dna'></div>
+
+<h2> Origin </h2> 
+<%= @cannabi.origin %>
 <%= image_tag (@cannabi.flag_url) %>
 
-<h2> Location </h2>
-
+<h3> Location </h3>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8' />
-  <title>Display a map</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
-  <style>
-      body { margin:0; padding:0; }
-      style: 'mapbox://styles/mapbox/satellite-v9'
-      # map { position:absolute; top:0; bottom:0; width:100%; }
-  </style>
-</head>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
-<div id='map'></div>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoidG1ja2VubmExIiwiYSI6ImNqa215bmJndzBnYWMzcG96bXB0cG54enoifQ.QBFnzyV6VVqaNwjOPeqHBw';
-    var map = new mapboxgl.Map({
+</head>
+<body>
+<div class="google-map">
+<div id='map' data="<%= @cannabi %>"></div>
+<div id='map' class='dark'></div>
+<script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoidG1ja2VubmExIiwiYSI6ImNqa215bmJndzBnYWMzcG96bXB0cG54enoifQ.QBFnzyV6VVqaNwjOPeqHBw';
+  var map = new mapbox.Map({
     container: 'map', 
     style: 'mapbox://styles/mapbox/streets-v9', 
-    center: [<%= @cannabi.lat %>,<%= @cannabi.lon %>], 
-    zoom: 9 
+    center: [<%= @cannabi.lon %>,<%= @cannabi.lat %>], 
+    zoom: 5
     });
-  </script>
-</html>
-
-<div id='map' class='dark'></div>
+</script>
+</head>

@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2018_08_08_152448) do
     t.string "flag_url"
     t.string "origin"
     t.text "data"
-    t.string "lat"
-    t.string "lon"
+    t.integer "lat"
+    t.integer "lon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

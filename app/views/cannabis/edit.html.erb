@@ -1,12 +1,20 @@
+<div class="topnav">
+  <%= link_to "Home Page", cannabis_path %>
+  <%= link_to "Create Page", edit_cannabi_path %>
+</div>
+
 <h1> Create a Strain </h1>
 
-
-<%= form_for :strain do |f| %>
-    <h2>Strain:</h2><%= f.text_field :strain %><br />
-    <h2>Origin:</h2><%= f.text_field :origin %><br />
-    <h2>Description:</h2><%= f.text_field :data %><br />
-    <h2>Image:</h2><%= f.text_field :img_url %><br /><br />
-    <%= f.submit %>  
+<img src="http://bestanimations.com/Nature/Flora/Hemp/animated-hemp-marijuana-gif-14.gif" />
+<%= form_for cannabi_path do |f| %>
+    <h2>Strain:</h2>
+    <%= f.text_field :strain %><br />
+    <h2>Origin:</h2>
+    <%= f.text_field :origin %><br />
+    <h2>Description:</h2>
+    <%= f.text_field :data %><br />
+    <h2>Image:</h2>
+    <%= f.text_field :img_url %><br /><br />
+    <%= f.submit "Submit", cannabis_path %>      
 <% end %>
 
-<h4><%= link_to 'List of Cannabis', cannabis_path  %></h4>
