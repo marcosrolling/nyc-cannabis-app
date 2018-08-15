@@ -11,18 +11,18 @@ class CannabisController < ApplicationController
 
     def new
         @cannabi = Cannabis.new
+
         render :new
     end
 
     def create
-        @cannabi = Cannabi
+        @cannabi = Cannabis.new
         cannabi_params = params.require(:cannabi).permit(:strain, :img_url, :origin, :flag_url, :data, :lat, :lon)
-        cannabi = Cannabis.new(cannabi_params)
 
         if cannabi.save
-            redirect_to @cannabi
+            redirect_to cannabis_path(@cannabi)
         else
-            render 'new'
+            render :new
         end
     end
 
@@ -32,7 +32,10 @@ class CannabisController < ApplicationController
 
     def update
         @cannabi = Cannabis.find(params[:id])
+
         if @cannabi.update_attr(cannabi_params)
+            flash[:success] = "Cannabis updated!"
+            redirect_to cannabi_path
         else
             render :edit
         end
