@@ -6,8 +6,8 @@ class CreateCannabis < ActiveRecord::Migration[5.2]
         t.string :flag_url
         t.string :origin
         t.text :data
-        t.string :lat
-        t.string :lon
+        t.integer :lat
+        t.integer :lon
 
       t.timestamps
     end
