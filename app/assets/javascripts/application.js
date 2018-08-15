@@ -18,10 +18,10 @@
 //= require_tree .
 
 
-// $( document ).ready(function() {
-//     console.log( "ready!" );
+$( document ).ready(function() {
+    console.log( "ready!" );
 
-//     L.mapbox.accessToken = 'pk.eyJ1IjoidG9kZG04NyIsImEiOiJjamtteW5hODYwZ2VyM3FxcjhxdHY1M3NoIn0.txU0n14hIpXGRxUPC56jng';
-//     const map = L.mapbox.map('map', 'mapbox.streets')
-//                         .setView([37.9, -77], 5);
-// })
+    L.mapbox.accessToken = 'pk.eyJ1IjoidG9kZG04NyIsImEiOiJjamtteW5hODYwZ2VyM3FxcjhxdHY1M3NoIn0.txU0n14hIpXGRxUPC56jng';
+    var map = L.mapbox.map('map', 'mapbox.streets')
+                        .setView([ 33.9391, 67.7100], 7);
+})
