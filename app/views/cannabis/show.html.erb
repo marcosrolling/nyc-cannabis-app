@@ -1,13 +1,15 @@
 <div class="topnav">
   <%= link_to "Home Page", cannabis_path %>
-  <%= link_to "Create Page", edit_cannabi_path %>
+  <%= link_to "Create Page", new_cannabi_path %>
+  <%= link_to "Delete", @cannabi, method: :delete,
+                                  message: {confirm: "You sure?"} %>
 </div>
 
 <h1><%= @cannabi.strain %></h1>
 
 <h2> Strain </h2>
 <div id="strain">
-<%= image_tag (@cannabi.img_url) %>
+  <%= image_tag (@cannabi.img_url) %>
 </div>
 
 <div class='dna'></div>
@@ -26,23 +28,24 @@
 <h3> Location </h3>
 <!DOCTYPE html>
 <html>
-<head>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
-</head>
-<body>
-<div class="google-map">
-<div id='map' data="<%= @cannabi %>"></div>
-<div id='map' class='dark'></div>
-<script>
-  L.mapbox.accessToken = 'pk.eyJ1IjoidG1ja2VubmExIiwiYSI6ImNqa215bmJndzBnYWMzcG96bXB0cG54enoifQ.QBFnzyV6VVqaNwjOPeqHBw';
-  var map = new mapbox.Map({
-    container: 'map', 
-    style: 'mapbox://styles/mapbox/streets-v9', 
-    center: [<%= @cannabi.lon %>,<%= @cannabi.lat %>], 
-    zoom: 5
-    });
-</script>
-</head>
+  </head>
+  <body>
+  <div class="google-map">
+  <div id='map' data="<%= @cannabi %>"></div>
+  <div id='map' class='dark'></div>
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoidG1ja2VubmExIiwiYSI6ImNqa215bmJndzBnYWMzcG96bXB0cG54enoifQ.QBFnzyV6VVqaNwjOPeqHBw';
+    var map = new mapbox.Map({
+      container: 'map', 
+      style: 'mapbox://styles/mapbox/streets-v9', 
+      center: [<%= @cannabi.lon %>,<%= @cannabi.lat %>], 
+      zoom: 5
+      });
+  </script>
+  </head>
+</html>
