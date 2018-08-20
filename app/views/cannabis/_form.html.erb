@@ -1,9 +1,25 @@
-<%= form_for @cannabi do |f| %>
-    <%= f.text_field_tag ('strain') %>
-    <br>
-    <%= f.text_field :data, placeholder: "description" %>
+<%= form_for @cannabi, url: "/cannabis" do |f| %>
 
-    <br>
-    <%= button_to "Create #{@cannabi.strain}", cannabi_path(@cannabi), method: :edit %>
+    <%= f.text_field :strain, placeholder: "name" %>
+    <br />
+    <%= f.text_field :data, placeholder: "description" %>
+    <br />
+    <%= f.text_field :img_url, placeholder: "cannabis image" %>
+    <br />
+    <%= f.text_field :origin, placeholder: "place of origin" %>
+    <br />
+
+
+<h1><%= @cannabi.strain %></h1>
+
+
+    <div class='dna'></div>
+
+    <h2> Origin </h2> 
+    <%= @cannabi.origin %>
+
+
+
+    <%= button_to "Create #{@cannabi.strain}", cannabis_path, method: :edit %>
 
 <% end %>
