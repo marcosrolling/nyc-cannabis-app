@@ -15,11 +15,19 @@
 </div>
 
 <div class="effect1">
-    <h2> Select a Strain </h2>  
-    
-    <%= select("post", "cannabi_id", @cannabi.all.collect {|f| [ f.strain, f.id ] }, {prompt: 'Select Strain'}) %>
-    <%= button_to "Select" %>
+    <h2> Select a Strain </h2> 
+
+<div class ="container">    
+    <% @cannabi.each do |strain| %>
+        <div class="strains">
+        <%= link_to "Strain:", cannabi_path(strain) %>
+        <%= strain.strain %> <br />
+        </div>
+    <% end %>
+</div>
+
+
 </div>    
 
-<footer>Copyright&copy Todd McIver </footer>
+<footer>Copyright &copy Todd McIver </footer>
     
